@@ -1,0 +1,180 @@
+/* src/App.css */
+:root {
+  --primary-color: #4285f4;
+  --error-color: #ea4335;
+  --success-color: #34a853;
+  --border-color: #dfe1e5;
+  --text-color: #202124;
+  --bg-color: #f8f9fa;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Google Sans', Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  padding: 20px;
+}
+
+.app {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main{
+  max-width: 800px;
+  width: 100% !important;
+}
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.form-container {
+  width: 100%;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #3367d6;
+}
+
+button:disabled {
+  background-color: #bdc1c6;
+  cursor: not-allowed;
+}
+
+.error {
+  color: var(--error-color);
+  margin-top: 1rem;
+}
+
+.results-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  overflow: hidden;
+}
+
+.results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.download-btn {
+  background-color: #34a853;
+}
+
+.download-btn:hover {
+  background-color: #2d8e47;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+th {
+  background-color: #f8f9fa;
+  font-weight: 500;
+}
+
+.mentioned-yes {
+  color: var(--success-color);
+  font-weight: 500;
+}
+
+.mentioned-no {
+  color: var(--error-color);
+  font-weight: 500;
+}
+
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  color: #5f6368;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .app {
+    padding: 10px;
+  }
+  
+  .form-container {
+    padding: 1rem;
+  }
+  
+  th, td {
+    padding: 0.75rem 0.5rem;
+  }
+}
